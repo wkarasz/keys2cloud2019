@@ -10,7 +10,7 @@ In addition, you can follow along exactly using a Cloud9 environment, an online 
 Accept the defaults for creating the environment:  
 ![Create Cloud9 Environment](./images/cloud9_setup.png)
   
-Prepare the environment:  
+Prepare the environment by running the command below:  
 ```bash
 git clone https://github.com/wkarasz/keys2cloud2019.git
 cd keys2cloud2019/scripts
