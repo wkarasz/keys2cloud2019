@@ -5,3 +5,7 @@ source /etc/environment
 sudo mkdir -p /opt/tibco/tce-cli
 sudo chown ec2-user.ec2-user -R /opt/tibco
 unzip ../utils/tce-cli-distribution-2.0.1-SNAPSHOT.zip -d /opt/tibco/tce-cli
+sudo sh -c 'echo "export TCECLI_HOME=/opt/tibco/tce-cli" >> /etc/environment'
+sudo sh -c 'echo "export PATH=${PATH}:${TCECLI_HOME}/bin" >> /etc/environment'
+source /etc/environment
+
