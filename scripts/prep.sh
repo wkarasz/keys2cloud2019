@@ -9,3 +9,8 @@ sudo sh -c 'echo "export TCECLI_HOME=/opt/tibco/tce-cli" >> /etc/environment'
 sudo sh -c 'echo "export PATH=${PATH}:${TCECLI_HOME}/bin" >> /etc/environment'
 source /etc/environment
 
+# tce-cli
+# login tce:login
+#   enter credentials
+# push app tce:push-application sandboxName archive [appSize]
+#   tce:push-application default /home/ec2-user/environment/keys2cloud2019/project/TNCDemoWJK.ear
