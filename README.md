@@ -1,7 +1,7 @@
 # Keys to the Cloud Workshop
 
 Launch a Cloud9 environment
-link:https://us-east-1.console.aws.amazon.com/cloud9/home/product#[Cloud9 US East 1]
+[Cloud9 us-east-1](https://us-east-1.console.aws.amazon.com/cloud9/home/product#)
 
 At the terminal prompt:
 ```bash
