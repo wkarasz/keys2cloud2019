@@ -8,7 +8,7 @@ In addition, you can follow along exactly using a Cloud9 environment, an online 
 [Cloud9 us-west-2](https://us-west-2.console.aws.amazon.com/cloud9/home/product#)  
   
 Accept the defaults for creating the environment:  
-
+![Create Cloud9 Environment](./images/cloud9_setup.png)
   
 Prepare the environment:  
 ```bash
