@@ -1,3 +1,12 @@
+= Create Workshop Environment
+:toc:
+:icons:
+:linkattrs:
+:imagesdir: ../../resources/images
+
+
+== Summary
+
 # keys2cloud2019
 Launch a Cloud9 environment
 At the terminal prompt:
