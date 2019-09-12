@@ -17,5 +17,5 @@ cd keys2cloud2019/scripts
 ./prep.sh
 ```
   
-[Deploy TCE Project](./1.TCE.md)
+Next step: [Deploy TCE Project](./1.TCE.md)
 
