@@ -1,0 +1,129 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "flights",
+    "x-lastModified": "Aug 30, 2019 12:21PM PST"
+  },
+  "paths": {
+    "/v1/flights/{flightid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/flight"
+            },
+            "examples": {
+              "application/json": {
+                "flight": {
+                  "flightid": "11111",
+                  "departurecity": "Philadelphia",
+                  "departuretime": "01:00 PM",
+                  "arrivalcity": "Boston",
+                  "arrivaltime": "02:30 PM"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error Response",
+            "schema": {
+              "$ref": "#/definitions/error"
+            },
+            "examples": {
+              "application/json": {
+                "code": 401,
+                "message": "Authentication Required"
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errorflights"
+            },
+            "examples": {
+              "application/json": {
+                "code": 404,
+                "message": "Flight Not Found"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "flightid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "get_flightid"
+      }
+    }
+  },
+  "definitions": {
+    "flight": {
+      "type": "object",
+      "properties": {
+        "flight": {
+          "type": "object",
+          "properties": {
+            "flightid": {
+              "type": "string",
+              "default": "11111"
+            },
+            "departurecity": {
+              "type": "string",
+              "default": "Philadelphia"
+            },
+            "departuretime": {
+              "type": "string",
+              "default": "01:00 PM"
+            },
+            "arrivalcity": {
+              "type": "string",
+              "default": "Boston"
+            },
+            "arrivaltime": {
+              "type": "string",
+              "default": "02:30 PM"
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 401
+        },
+        "message": {
+          "type": "string",
+          "default": "Authentication Required"
+        }
+      }
+    },
+    "errorflights": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "flightid: 12334 Not Found"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{ 
+    "aircrafts": [
+                 { 
+                    "aircraftid":      "111",
+                    "type":            "767",  
+                    "seatcapacity":    "280"
+                 },
+                 { 
+                    "aircraftid":      "222",
+                    "type":            "777",  
+                    "seatcapacity":    "350"
+                 },
+                 {
+                    "aircraftid":      "333",
+                    "type":            "777X",  
+                    "seatcapacity":    "390"
+                }
+      ] 
+}

@@ -1,0 +1,7 @@
+{ 
+    "aircraft": { 
+            "aircraftid":      "111",
+            "type":            "767",  
+            "seatcapacity":    "280"
+    } 
+}

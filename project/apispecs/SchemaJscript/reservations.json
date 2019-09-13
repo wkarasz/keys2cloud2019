@@ -1,0 +1,37 @@
+{ 
+    "reservations": [
+                 { 
+                    "reservationid": "AAAAA11111",
+                    "flightid":      "11111",
+                    "passengerid":   "AAAAA",  
+                    "aircraftid":    "111",
+                    "timecodeid":    "201909010100PM",
+                    "price":         "250.00",
+                    "class":         "Business",
+                    "rownumber":     "20",
+                    "seatnumber":    "A"
+                 },
+                 { 
+                    "reservationid": "BBBBB11111",
+                    "flightid":      "11111",
+                    "passengerid":   "BBBBB",  
+                    "aircraftid":    "111",
+                    "timecodeid":    "201909010100PM",
+                    "price":         "250.00",
+                    "class":         "Business",
+                    "rownumber":     "22",
+                    "seatnumber":    "B"
+                 },
+                 {
+                    "reservationid": "CCCCC11111",
+                    "flightid":      "11111",
+                    "passengerid":   "CCCCC",  
+                    "aircraftid":    "111",
+                    "timecodeid":    "201909010100PM",
+                    "price":         "250.00",
+                    "class":         "Business",
+                    "rownumber":     "23",
+                    "seatnumber":    "C"
+                }
+      ] 
+}

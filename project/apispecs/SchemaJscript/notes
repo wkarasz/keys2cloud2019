@@ -1,0 +1,34 @@
+https://integration.cloud.tibcoapps.com:443/lialm5kffltqoxod6z7gscr7blrzna6b/v1/flights/11111
+
+https://integration.cloud.tibcoapps.com:443/wz3dr4zotkxmqg5au6yhc526iw2otlc2/v1/aircrafts/111
+
+https://integration.cloud.tibcoapps.com:443/qzqdnunvcodjxlnybwlc37ngxcowm5qc/v1/passengers/AAAAA
+
+https://integration.cloud.tibcoapps.com:443/2q4svehpwlra2l4hgikbr3mjfkwmoqem/v1/reservations/AAAAA11111
+
+https://integration.cloud.tibcoapps.com:443/7ymfljw462elrwkyh4s4qzctkyhfjlkk/v1/statuses/11111
+
+https://integration.cloud.tibcoapps.com:443/xyhdrc73ala74l4yukjro6jtytv4oij4/v1/timecodes/201909010100PM
+
+https://integration.cloud.tibcoapps.com:443/oyvknxrj6iv6rsqyrh6bfkp4lsxfpo3v/v1/itineraries/AAAAA11111
+
+https://integration.cloud.tibcoapps.com:443/oyvknxrj6iv6rsqyrh6bfkp4lsxfpo3v/v1/itineraries/BBBBB11111
+
+https://integration.cloud.tibcoapps.com:443/oyvknxrj6iv6rsqyrh6bfkp4lsxfpo3v/v1/itineraries/CCCCC11111
+
+
+
+https://integration.cloud.tibcoapps.com:443/wz3dr4zotkxmqg5au6yhc526iw2otlc2/v1/aircrafts/{aircraftid}
+
+map input aircraftid 
+$activity[Reservation].responseBody.reservation.aircraftid
+
+
+Output Settings -> Response Schema
+{ 
+    "aircraft": { 
+            "aircraftid":      "111",
+            "type":            "767",  
+            "seatcapacity":    "280"
+    } 
+}

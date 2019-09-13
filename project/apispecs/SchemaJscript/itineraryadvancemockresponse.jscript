@@ -1,0 +1,145 @@
+function customCode(req, res) {
+  /** 
+   * JavaScript code to set mock response,
+   * please refer to documentation for supported API operations. 
+   * res.status = 200
+   * res.body = {name:"cat"} 
+   */
+ 
+ //your code goes here
+  var pathparams = req.params;
+  if (pathparams.reservationid === "AAAAA11111") {
+    res.status = 200;
+    res.body = {
+      "itinerary": { 
+                              "passenger": { 
+                                            "passengerid":      "AAAAA",
+                                            "name":             "John Fisher",  
+                                            "street":           "1 Market Street",
+                                            "city":             "Philadelphia",
+                                            "zipcode":          "19350"
+                            },
+                            "flight" : {
+                                            "flightid":      "11111",
+                                            "departurecity":  "Philadelphia",  
+                                            "departuretime": "01:00 PM",
+                                            "arrivalcity":   "Boston",
+                                            "arrivaltime":   "02:30 PM"
+                            },
+                            "status": { 
+                                            "flightid":    "11111",
+                                            "status":      "Delayed",  
+                                            "terminal":    "B",
+                                            "gate":        "B1"
+                            },
+                            "reservation": { 
+                                            "reservationid": "AAAAA11111",
+                                            "flightid":      "11111",
+                                            "passengerid":   "AAAAA",  
+                                            "aircraftid":    "111",
+                                            "timecodeid":    "201909010100PM",
+                                            "price":         "250.00",
+                                            "class":         "Business",
+                                            "rownumber":     "20",
+                                            "seatnumber":    "A"
+                            },
+                            "aircraft": { 
+                                            "aircraftid":      "111",
+                                            "type":            "767",  
+                                            "seatcapacity":    "280"
+                            } 
+    	}
+    };
+  } else if (pathparams.reservationid === "BBBBB11111") {
+    res.status = 200;
+    res.body = {
+      "itinerary": { 
+                              "passenger": { 
+                                            "passengerid":      "BBBBB",
+                                            "name":             "Jim Smith",  
+                                            "street":           "2 Spruce Street",
+                                            "city":             "Boston",
+                                            "zipcode":          "29350"
+                            },
+                            "flight" : {
+                                            "flightid":      "11111",
+                                            "departurecity":  "Philadelphia",  
+                                            "departuretime": "01:00 PM",
+                                            "arrivalcity":   "Boston",
+                                            "arrivaltime":   "02:30 PM"
+                            },
+                            "status": { 
+                                            "flightid":    "11111",
+                                            "status":      "Delayed",  
+                                            "terminal":    "B",
+                                            "gate":        "B1"
+                            },
+                            "reservation": { 
+                                            "reservationid": "BBBBB11111",
+                                            "flightid":      "11111",
+                                            "passengerid":   "BBBBB",  
+                                            "aircraftid":    "111",
+                                            "timecodeid":    "201909010100PM",
+                                            "price":         "250.00",
+                                            "class":         "Business",
+                                            "rownumber":     "22",
+                                            "seatnumber":    "B"
+                            },
+                            "aircraft": { 
+                                            "aircraftid":      "111",
+                                            "type":            "767",  
+                                            "seatcapacity":    "280"
+                            } 
+    	}
+    };
+  } else if (pathparams.reservationid === "CCCCC11111") {
+    res.status = 200;
+    res.body = {
+      "itinerary": { 
+                            "passenger": { 
+                                            "passengerid":      "CCCCC",
+                                            "name":             "Sally Jones",  
+                                            "street":           "3 Maplet Street",
+                                            "city":             "Philadelphia",
+                                            "zipcode":          "19350"
+                            },
+                            "flight" : {
+                                            "flightid":      "11111",
+                                            "departurecity":  "Philadelphia",  
+                                            "departuretime": "01:00 PM",
+                                            "arrivalcity":   "Boston",
+                                            "arrivaltime":   "02:30 PM"
+                            },
+                            "status": { 
+                                            "flightid":    "11111",
+                                            "status":      "Delayed",  
+                                            "terminal":    "B",
+                                            "gate":        "B1"
+                            },
+                            "reservation": { 
+                                            "reservationid": "CCCCC11111",
+                                            "flightid":      "11111",
+                                            "passengerid":   "CCCCC",  
+                                            "aircraftid":    "111",
+                                            "timecodeid":    "201909010100PM",
+                                            "price":         "250.00",
+                                            "class":         "Business",
+                                            "rownumber":     "23",
+                                            "seatnumber":    "C"
+                            },
+                            "aircraft": { 
+                                            "aircraftid":      "111",
+                                            "type":            "767",  
+                                            "seatcapacity":    "280"
+                            }
+    	}
+    };
+  } else {
+    res.status = 404;
+    res.body = {
+        "code": 404,
+        "message": "reservationid: " + pathparams.reservationid + " Not Found"
+    };
+  }
+  return res;
+}

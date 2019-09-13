@@ -1,0 +1,40 @@
+{ 
+    "itinerary": { 
+            "passenger": { 
+                            "passengerid":      "AAAAA",
+                            "name":             "John Fisher",  
+                            "street":           "1 Market Street",
+                            "city":             "Philadelphia",
+                            "zipcode":          "19350"
+            },
+            "flight" : {
+                            "flightid":      "11111",
+                            "departurecity":  "Philadelphia",  
+                            "departuretime": "01:00 PM",
+                            "arrivalcity":   "Boston",
+                            "arrivaltime":   "02:30 PM"
+            },
+            "status": { 
+                            "flightid":    "11111",
+                            "status":      "Delayed",  
+                            "terminal":    "B",
+                            "gate":        "B1"
+            },
+            "reservation": { 
+                            "reservationid": "AAAAA11111",
+                            "flightid":      "11111",
+                            "passengerid":   "AAAAA",  
+                            "aircraftid":    "111",
+                            "timecodeid":    "201909010100PM",
+                            "price":         "250.00",
+                            "class":         "Business",
+                            "rownumber":     "20",
+                            "seatnumber":    "A"
+            },
+            "aircraft": { 
+                            "aircraftid":      "111",
+                            "type":            "767",  
+                            "seatcapacity":    "280"
+            } 
+    } 
+}

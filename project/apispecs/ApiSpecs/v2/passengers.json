@@ -1,0 +1,274 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2.0",
+    "title": "passengers",
+    "x-lastModified": "Aug 30, 2019 12:32PM PST"
+  },
+  "paths": {
+    "/v2/passengers/{passengerid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/passenger"
+            },
+            "examples": {
+              "application/json": {
+                "passenger": {
+                  "passengerid": "AAAAA",
+                  "name": "John Fisher",
+                  "street": "1 Market Street",
+                  "city": "Philadelphia",
+                  "zipcode": "19350"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errorpassenger"
+            },
+            "examples": {
+              "application/json": {
+                "code": 404,
+                "message": "passengerid: 1233 Not Found"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "passengerid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Passengers_passengerid"
+      },
+      "delete": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "passengerid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "deleteV1Passengers_passengerid"
+      }
+    },
+    "/v2/passengers": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Passenger Details",
+            "schema": {
+              "$ref": "#/definitions/passenger"
+            }
+          }
+        ],
+        "operationId": "postV1Passengers",
+        "consumes": [
+          "application/json"
+        ]
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/passengers"
+            },
+            "examples": {
+              "application/json": {
+                "passengers": [
+                  {
+                    "passengerid": "AAAAA",
+                    "name": "John Fisher",
+                    "street": "1 Market Street",
+                    "city": "Philadelphia",
+                    "zipcode": "19350"
+                  },
+                  {
+                    "passengerid": "BBBBB",
+                    "name": "Jim Smith",
+                    "street": "2 Spruce Street",
+                    "city": "Boston",
+                    "zipcode": "29350"
+                  },
+                  {
+                    "passengerid": "CCCCC",
+                    "name": "Sally Jones",
+                    "street": "3 Maplet Street",
+                    "city": "Philadelphia",
+                    "zipcode": "19350"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [],
+        "operationId": "getV1Passengers"
+      },
+      "put": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/passenger"
+            }
+          }
+        ],
+        "operationId": "putV1Passengers",
+        "consumes": [
+          "application/json"
+        ]
+      },
+      "patch": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/passenger"
+            }
+          }
+        ],
+        "operationId": "patchV1Passengers",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "passenger": {
+      "type": "object",
+      "properties": {
+        "passenger": {
+          "type": "object",
+          "properties": {
+            "passengerid": {
+              "type": "string",
+              "default": "AAAAA"
+            },
+            "name": {
+              "type": "string",
+              "default": "John Fisher"
+            },
+            "street": {
+              "type": "string",
+              "default": "1 Market Street"
+            },
+            "city": {
+              "type": "string",
+              "default": "Philadelphia"
+            },
+            "zipcode": {
+              "type": "string",
+              "default": "19350"
+            }
+          }
+        }
+      }
+    },
+    "errorpassenger": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "passengerid: 1233 Not Found"
+        }
+      }
+    },
+    "passengers": {
+      "type": "object",
+      "properties": {
+        "passengers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "passengerid": {
+                "type": "string",
+                "default": "CCCCC"
+              },
+              "name": {
+                "type": "string",
+                "default": "Sally Jones"
+              },
+              "street": {
+                "type": "string",
+                "default": "3 Maplet Street"
+              },
+              "city": {
+                "type": "string",
+                "default": "Philadelphia"
+              },
+              "zipcode": {
+                "type": "string",
+                "default": "19350"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

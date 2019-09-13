@@ -1,0 +1,124 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "reservations",
+    "x-lastModified": "Aug 30, 2019 12:22PM PST"
+  },
+  "paths": {
+    "/v1/reservations/{reservationid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/reservation"
+            },
+            "examples": {
+              "application/json": {
+                "reservation": {
+                  "reservationid": "AAAAA11111",
+                  "flightid": "11111",
+                  "passengerid": "AAAAA",
+                  "aircraftid": "111",
+                  "timecodeid": "201909010100PM",
+                  "price": "250.00",
+                  "class": "Business",
+                  "rownumber": "20",
+                  "seatnumber": "A"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errroreservations"
+            },
+            "examples": {
+              "application/json": {
+                "code": 401,
+                "message": "Authentication Required"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "reservationid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Reservations_reservationid"
+      }
+    }
+  },
+  "definitions": {
+    "reservation": {
+      "type": "object",
+      "properties": {
+        "reservation": {
+          "type": "object",
+          "properties": {
+            "reservationid": {
+              "type": "string",
+              "default": "AAAAA11111"
+            },
+            "flightid": {
+              "type": "string",
+              "default": "11111"
+            },
+            "passengerid": {
+              "type": "string",
+              "default": "AAAAA"
+            },
+            "aircraftid": {
+              "type": "string",
+              "default": "111"
+            },
+            "timecodeid": {
+              "type": "string",
+              "default": "201909010100PM"
+            },
+            "price": {
+              "type": "string",
+              "default": "250.00"
+            },
+            "class": {
+              "type": "string",
+              "default": "Business"
+            },
+            "rownumber": {
+              "type": "string",
+              "default": "20"
+            },
+            "seatnumber": {
+              "type": "string",
+              "default": "A"
+            }
+          }
+        }
+      }
+    },
+    "errroreservations": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "reservationid: AAAAA123123  Not Found"
+        }
+      }
+    }
+  }
+}

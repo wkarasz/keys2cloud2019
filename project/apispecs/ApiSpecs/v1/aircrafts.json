@@ -1,0 +1,107 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "aircrafts",
+    "x-lastModified": "Aug 30, 2019 12:20PM PST"
+  },
+  "paths": {
+    "/v1/aircrafts/{aircraftid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/aircraft"
+            },
+            "examples": {
+              "application/json": {
+                "aircraft": {
+                  "aircraftid": "111",
+                  "type": "767",
+                  "seatcapacity": "280"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/erroraircrafts"
+            },
+            "examples": {
+              "application/json": {
+                "code": 401,
+                "message": "Authentication Required"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "aircraftid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Aircrafts_aircraftid"
+      }
+    }
+  },
+  "definitions": {
+    "aircraft": {
+      "type": "object",
+      "properties": {
+        "aircraft": {
+          "type": "object",
+          "properties": {
+            "aircraftid": {
+              "type": "string",
+              "default": "111"
+            },
+            "type": {
+              "type": "string",
+              "default": "767"
+            },
+            "seatcapacity": {
+              "type": "string",
+              "default": "280"
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 401
+        },
+        "message": {
+          "type": "string",
+          "default": "Authentication Required"
+        }
+      }
+    },
+    "erroraircrafts": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "aircraftid: 13234234 Not Found"
+        }
+      }
+    }
+  }
+}

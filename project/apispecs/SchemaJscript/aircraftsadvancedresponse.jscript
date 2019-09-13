@@ -1,0 +1,46 @@
+function customCode(req, res) {
+  /** 
+   * JavaScript code to set mock response,
+   * please refer to documentation for supported API operations. 
+   * res.status = 200
+   * res.body = {name:"cat"} 
+   */
+ 
+ //your code goes here
+  var pathparams = req.params;
+  if (pathparams.aircraftid === "111") {
+    res.status = 200;
+    res.body = {
+		"aircraft": { 
+            "aircraftid":      "111",
+            "type":            "767",  
+            "seatcapacity":    "280"
+    	} 
+    };
+  } else if (pathparams.aircraftid === "222") {
+    res.status = 200;
+    res.body = {
+		"aircraft": { 
+            "aircraftid":      "222",
+            "type":            "777",  
+            "seatcapacity":    "350"
+    	} 
+    };
+  } else if (pathparams.aircraftid === "333") {
+    res.status = 200;
+    res.body = {
+		"aircraft": { 
+            "aircraftid":      "333",
+            "type":            "777X",  
+            "seatcapacity":    "390"
+    	} 
+    };
+  } else {
+    res.status = 404;
+    res.body = {
+        "code": 404,
+        "message": "aircraftid: " + pathparams.aircraftid + " Not Found"
+    };
+  }
+  return res;
+}

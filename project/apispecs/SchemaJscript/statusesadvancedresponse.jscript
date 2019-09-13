@@ -1,0 +1,49 @@
+function customCode(req, res) {
+  /** 
+   * JavaScript code to set mock response,
+   * please refer to documentation for supported API operations. 
+   * res.status = 200
+   * res.body = {name:"cat"} 
+   */
+ 
+ //your code goes here
+  var pathparams = req.params;
+  if (pathparams.flightid === "11111") {
+    res.status = 200;
+    res.body = {
+		"status": { 
+                    "flightid":    "11111",
+                    "status":      "Delayed",  
+                    "terminal":    "B",
+                    "gate":        "B1"
+    	} 
+    };
+  } else if (pathparams.flightid === "22222") {
+    res.status = 200;
+    res.body = {
+		"status": { 
+                    "flightid":    "22222",
+                    "status":      "Delayed",  
+                    "terminal":    "A",
+                    "gate":        "A11"
+    	} 
+    };
+  } else if (pathparams.flightid === "33333") {
+    res.status = 200;
+    res.body = {
+		"status": { 
+                    "flightid":    "33333",
+                    "status":      "Cancled",  
+                    "terminal":    "C",
+                    "gate":        "C5"
+    	} 
+    };
+  } else {
+    res.status = 404;
+    res.body = {
+        "code": 404,
+        "message": "flightidid: " + pathparams.flightid + " Not Found"
+    };
+  }
+  return res;
+}

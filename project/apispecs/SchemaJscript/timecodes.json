@@ -1,0 +1,31 @@
+{ 
+    "timecodes": [
+                 { 
+                    "timecodeid":    "201909010100PM",
+                    "day":      "09",  
+                    "month":    "01",
+                    "year":     "2019",
+                    "hour":     "01",
+                    "min":      "00",
+                    "ampm":     "PM"
+                 },
+                 { 
+                    "timecodeid":    "201909010230PM",
+                    "day":      "09",  
+                    "month":    "01",
+                    "year":     "2019",
+                    "hour":     "02",
+                    "min":      "30",
+                    "ampm":     "PM"
+                 },
+                 {
+                    "timecodeid":    "201909010430PM",
+                    "day":      "09",  
+                    "month":    "01",
+                    "year":     "2019",
+                    "hour":     "04",
+                    "min":      "30",
+                    "ampm":     "PM"
+                }
+      ] 
+}

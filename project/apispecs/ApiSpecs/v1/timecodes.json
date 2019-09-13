@@ -1,0 +1,152 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "timecodes",
+    "x-lastModified": "Aug 30, 2019 12:23PM PST"
+  },
+  "paths": {
+    "/v1/timecodes/{timecodeid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/timecode"
+            },
+            "examples": {
+              "application/json": {
+                "timecode": {
+                  "timecodeid": "201909010100PM",
+                  "day": "09",
+                  "month": "01",
+                  "year": "2019",
+                  "hour": "01",
+                  "min": "00",
+                  "ampm": "PM"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errortimecode"
+            },
+            "examples": {
+              "application/json": {
+                "code": 404,
+                "message": "timecodeid: 1231233 Not Found"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "timecodeid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Timescodes_timecodeid"
+      }
+    }
+  },
+  "definitions": {
+    "GiveNewSchemaNameHere": {
+      "type": "object",
+      "properties": {
+        "timecode": {
+          "type": "object",
+          "properties": {
+            "timecodeid": {
+              "type": "string",
+              "default": "201909010100PM"
+            },
+            "day": {
+              "type": "string",
+              "default": "09"
+            },
+            "month": {
+              "type": "string",
+              "default": "01"
+            },
+            "year": {
+              "type": "string",
+              "default": "2019"
+            },
+            "hour": {
+              "type": "string",
+              "default": "01"
+            },
+            "min": {
+              "type": "string",
+              "default": "00"
+            },
+            "ampm": {
+              "type": "string",
+              "default": "PM"
+            }
+          }
+        }
+      }
+    },
+    "timecode": {
+      "type": "object",
+      "properties": {
+        "timecode": {
+          "type": "object",
+          "properties": {
+            "timecodeid": {
+              "type": "string",
+              "default": "201909010100PM"
+            },
+            "day": {
+              "type": "string",
+              "default": "09"
+            },
+            "month": {
+              "type": "string",
+              "default": "01"
+            },
+            "year": {
+              "type": "string",
+              "default": "2019"
+            },
+            "hour": {
+              "type": "string",
+              "default": "01"
+            },
+            "min": {
+              "type": "string",
+              "default": "00"
+            },
+            "ampm": {
+              "type": "string",
+              "default": "PM"
+            }
+          }
+        }
+      }
+    },
+    "errortimecode": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "timecodeid: 1231233 Not Found"
+        }
+      }
+    }
+  }
+}

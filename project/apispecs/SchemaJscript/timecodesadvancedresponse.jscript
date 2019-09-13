@@ -1,0 +1,58 @@
+function customCode(req, res) {
+  /** 
+   * JavaScript code to set mock response,
+   * please refer to documentation for supported API operations. 
+   * res.status = 200
+   * res.body = {name:"cat"} 
+   */
+ 
+ //your code goes here
+  var pathparams = req.params;
+  if (pathparams.timecodeid === "201909010100PM") {
+    res.status = 200;
+    res.body = {
+		"timecode": { 
+            "timecodeid":    "201909010100PM",
+            "day":      "09",  
+            "month":    "01",
+            "year":     "2019",
+            "hour":     "01",
+            "min":      "00",
+            "ampm":     "PM"
+    	} 
+    };
+  } else if (pathparams.timecodeid === "201909010230PM") {
+    res.status = 200;
+    res.body = {
+		"timecode": { 
+                    "timecodeid":    "201909010230PM",
+                    "day":      "09",  
+                    "month":    "01",
+                    "year":     "2019",
+                    "hour":     "02",
+                    "min":      "30",
+                    "ampm":     "PM"
+    	} 
+    };
+  } else if (pathparams.timecodeid === "201909010430PM") {
+    res.status = 200;
+    res.body = {
+		"timecode": { 
+                    "timecodeid":    "201909010430PM",
+                    "day":      "09",  
+                    "month":    "01",
+                    "year":     "2019",
+                    "hour":     "04",
+                    "min":      "30",
+                    "ampm":     "PM"
+    	} 
+    };
+  } else {
+    res.status = 404;
+    res.body = {
+        "code": 404,
+        "message": "timecodeid: " + pathparams.timecodeid + " Not Found"
+    };
+  }
+  return res;
+}

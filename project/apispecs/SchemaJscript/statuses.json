@@ -1,0 +1,22 @@
+{ 
+    "statuses": [
+                 { 
+                    "flightid":    "11111",
+                    "status":      "Delayed",  
+                    "terminal":    "B",
+                    "gate":        "B1"
+                 },
+                 { 
+                    "flightid":    "22222",
+                    "status":      "Delayed",  
+                    "terminal":    "A",
+                    "gate":        "A11"
+                 },
+                 {
+                    "flightid":    "33333",
+                    "status":      "Cancled",  
+                    "terminal":    "C",
+                    "gate":        "C5"
+                }
+      ] 
+}

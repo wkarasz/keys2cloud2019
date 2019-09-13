@@ -1,0 +1,9 @@
+{ 
+    "flight": { 
+            "flightid":      "11111",
+            "departurecity":  "Philadelphia",  
+            "departuretime": "01:00 PM",
+            "arrivalcity":   "Boston",
+            "arrivaltime":   "02:30 PM"
+    } 
+}

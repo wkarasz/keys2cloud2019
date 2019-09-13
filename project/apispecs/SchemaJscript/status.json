@@ -1,0 +1,8 @@
+{ 
+    "status": { 
+            "flightid":    "11111",
+            "status":      "Delayed",  
+            "terminal":    "B",
+            "gate":        "B1"
+    } 
+}

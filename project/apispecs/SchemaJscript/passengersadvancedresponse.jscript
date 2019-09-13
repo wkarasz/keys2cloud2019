@@ -1,0 +1,52 @@
+function customCode(req, res) {
+  /** 
+   * JavaScript code to set mock response,
+   * please refer to documentation for supported API operations. 
+   * res.status = 200
+   * res.body = {name:"cat"} 
+   */
+ 
+ //your code goes here
+  var pathparams = req.params;
+  if (pathparams.passengerid === "AAAAA") {
+    res.status = 200;
+    res.body = {
+		"passenger": { 
+                    "passengerid":      "AAAAA",
+                    "name":             "John Fisher",  
+                    "street":           "1 Market Street",
+                    "city":             "Philadelphia",
+                    "zipcode":          "19350"
+    	} 
+    };
+  } else if (pathparams.passengerid === "BBBBB") {
+    res.status = 200;
+    res.body = {
+		"passenger": { 
+                    "passengerid":      "BBBBB",
+                    "name":             "Jim Smith",  
+                    "street":           "2 Spruce Street",
+                    "city":             "Boston",
+                    "zipcode":          "29350"
+    	} 
+    };
+  } else if (pathparams.passengerid === "CCCCC") {
+    res.status = 200;
+    res.body = {
+		"passenger": { 
+                    "passengerid":      "CCCCC",
+                    "name":             "Sally Jones",  
+                    "street":           "3 Maplet Street",
+                    "city":             "Philadelphia",
+                    "zipcode":          "19350"
+    	} 
+    };
+  } else {
+    res.status = 404;
+    res.body = {
+        "code": 404,
+        "message": "passengerid: " + pathparams.passengerid + " Not Found"
+    };
+  }
+  return res;
+}

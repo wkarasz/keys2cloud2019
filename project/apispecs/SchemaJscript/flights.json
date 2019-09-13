@@ -1,0 +1,25 @@
+ { 
+    "flights": [
+                 { 
+                    "flightid":      "11111",
+                    "departurecity":  "Philadelphia",  
+                    "departuretime": "01:00 PM",
+                    "arrivalcity":   "Boston",
+                    "arrivaltime":   "02:30 PM"
+                 },
+                 { 
+                    "flightid":      "22222",
+                    "departurecity":  "Philadelphia",  
+                    "departuretime": "02:00 PM",
+                    "arrivalcity":   "Chicago",
+                    "arrivaltime":   "04:30 PM"
+                 },
+                 {
+                    "flightid":      "33333",
+                    "departurecity":  "San Francisco",  
+                    "departuretime": "04:00 PM",
+                    "arrivalcity":   "Dallas",
+                    "arrivaltime":   "10:30 PM"
+                }
+      ] 
+}

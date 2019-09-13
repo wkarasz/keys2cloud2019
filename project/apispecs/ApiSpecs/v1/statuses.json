@@ -1,0 +1,99 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "statuses",
+    "x-lastModified": "Aug 30, 2019 12:23PM PST"
+  },
+  "paths": {
+    "/v1/statuses/{flightid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/status"
+            },
+            "examples": {
+              "application/json": {
+                "status": {
+                  "flightid": "11111",
+                  "status": "Delayed",
+                  "terminal": "B",
+                  "gate": "B1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errorstatuses"
+            },
+            "examples": {
+              "application/json": {
+                "code": 404,
+                "message": "flightid: 12311 Not Found"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "flightid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Statuses_flightid"
+      }
+    }
+  },
+  "definitions": {
+    "errorstatuses": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "flightid: 12311 Not Found"
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "object",
+          "properties": {
+            "flightid": {
+              "type": "string",
+              "default": "11111"
+            },
+            "status": {
+              "type": "string",
+              "default": "Delayed"
+            },
+            "terminal": {
+              "type": "string",
+              "default": "B"
+            },
+            "gate": {
+              "type": "string",
+              "default": "B1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

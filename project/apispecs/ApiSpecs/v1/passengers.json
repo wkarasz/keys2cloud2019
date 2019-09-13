@@ -1,0 +1,104 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "passengers",
+    "x-lastModified": "Aug 30, 2019 12:22PM PST"
+  },
+  "paths": {
+    "/v1/passengers/{passengerid}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/passenger"
+            },
+            "examples": {
+              "application/json": {
+                "passenger": {
+                  "passengerid": "AAAAA",
+                  "name": "John Fisher",
+                  "street": "1 Market Street",
+                  "city": "Philadelphia",
+                  "zipcode": "19350"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errorpassenger"
+            },
+            "examples": {
+              "application/json": {
+                "code": 404,
+                "message": "passengerid: 1233 Not Found"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "passengerid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getV1Passengers_passengerid"
+      }
+    }
+  },
+  "definitions": {
+    "passenger": {
+      "type": "object",
+      "properties": {
+        "passenger": {
+          "type": "object",
+          "properties": {
+            "passengerid": {
+              "type": "string",
+              "default": "AAAAA"
+            },
+            "name": {
+              "type": "string",
+              "default": "John Fisher"
+            },
+            "street": {
+              "type": "string",
+              "default": "1 Market Street"
+            },
+            "city": {
+              "type": "string",
+              "default": "Philadelphia"
+            },
+            "zipcode": {
+              "type": "string",
+              "default": "19350"
+            }
+          }
+        }
+      }
+    },
+    "errorpassenger": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "default": 404
+        },
+        "message": {
+          "type": "string",
+          "default": "passengerid: 1233 Not Found"
+        }
+      }
+    }
+  }
+}
