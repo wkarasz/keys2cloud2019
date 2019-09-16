@@ -20,16 +20,15 @@ Let’s create a GROUP to organize your APIs.
 3)  Select your CustomerExperienceAirport group.
   
 ### Import API Spec  
-Import https://raw.githubusercontent.com/wkarasz/keys2cloud2019/master/project/apispecs/ApiSpecs/v2/passengers.json  
 
-API Spec allows you to start from scratch or start with a existing specification that you can import from a your file system, URL or Github.  We are going to start with a existing API spec that will be imported from your file system.  
+API Spec allows you to start from scratch or start with a existing specification that you can import from a your file system, URL or Github.  We are going to start with a existing API spec that will be imported from URL.
 
-1)	Select the up-arrow next to create to and choose Import from filesystem.
-2)	Navigate to where you extracted the connected customer experience artifacts and choose CustomerExperienceAirport/APISpecs/v2/passengers.json.
+1)	Select the up-arrow next to create to and choose Import from URL.
+2)	Paste in: Import https://raw.githubusercontent.com/wkarasz/keys2cloud2019/master/project/apispecs/ApiSpecs/v2/passengers.json   
 
 ### Explore API Spec
 
-Now let’s explore the passenger API spec.    The purpose of this exploration is to showcase best practices as discussed in the above sections.
+Now let’s explore the passenger API spec.  The purpose of this exploration is to showcase best practices as discussed in the above sections.
 
 1)	Select passengers.
 2)	Passengers API spec is opened to the /v2/passengers/{passengerid} resource and the GET method is highlighted and the request is shown.  The /v2/passengers/{passengerid} is the path developers will use to access this resource, the API is expecting a passengerid to be passed to it in the request.
