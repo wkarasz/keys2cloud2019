@@ -43,3 +43,24 @@ Let’s extend the itineraries API to include aircrafts details.
     "seatcapacity":"280"}
 }
 ```
+11) Let’s map the aircraft details into the Return activity.  Select Return activity, expand Flow Outputs itinerary and select aircraft.  In upstream Output Aircraft, expand Aircraft->responseBody, select aircraft.
+  
+### Start Testing
+In this section we will test itineraries API implementation.
+
+1)	Select Start testing.
+2)	Select Create a Launch Configuration.
+3)	Expand Activity Input flowInputs->pathParams->reservationid.  And enter ‘AAAAA11111’ into flowInputs.  Use quotes.  Select Next. Select Run.
+4)	Your Testing is complete.  Scroll down to see the response and confirm that aircraft details were added to the response.
+5)	Select Stop Testing. Cancel. 
+  
+### Push App
+In this section we are going to push the itineraries app to the cloud and test the live endpoints.
+
+1)	Select Push app.
+2)	The itineraries app with be pushed to the cloud and you will see a progress bar and a completion message.
+3)	Test your live endpoint by selecting Endpoint, select View and Test.
+4)	Enter AAAAA11111 for reserverationid input parameter and select Try it out!
+  
+### Summary
+In this exercise you imported application and extanded by reusing aircrafts api.  You performed a local test and pushed the application to the cloud.  You finshed by testing the applications live endpoints.
