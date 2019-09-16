@@ -30,4 +30,4 @@ This next section will show you how to test your mock application end points.
 ### Summary
 Creating Mock Apps is as simple as a mouse click on TIBCO Connected Intelligence Cloud.  In this section we leveraged the passengers API and generated and deployed a mock passengers app to the cloud and tested the API end point.
   
-Next step: [Create Offer API](0.TCE.md)
+Next step: [Implement Actual API](apiimplementation.md)
