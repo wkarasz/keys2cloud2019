@@ -44,3 +44,8 @@ Previewing the API gives you a complete overview of the structure of your API al
 
 1)	Select Preview.
 2)	You are presented with interactive documentation showing all resources, parameters, methods and responses.  You can share this API specification with anyone in your organization and solicited feedback before you begin to implement.  This supports continuous planning and is a best practice development methodology.  
+  
+### Summary
+API Specification on the TIBCO Connected Intelligence Cloud platform enables you to create blueprint structures for your APIs using a browser-based web GUI. Allows you to collaborate with others in your organizations to get early feedback and allow you to identify needed changes earlier in the API lifecycle.
+  
+Next page: 
