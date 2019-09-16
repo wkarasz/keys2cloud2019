@@ -64,3 +64,5 @@ In this section we are going to push the itineraries app to the cloud and test t
   
 ### Summary
 In this exercise you imported application and extanded by reusing aircrafts api.  You performed a local test and pushed the application to the cloud.  You finshed by testing the applications live endpoints.
+  
+Next step: [Import Offer API Engine](1.TCE.md)
