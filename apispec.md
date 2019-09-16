@@ -48,4 +48,4 @@ Previewing the API gives you a complete overview of the structure of your API al
 ### Summary
 API Specification on the TIBCO Connected Intelligence Cloud platform enables you to create blueprint structures for your APIs using a browser-based web GUI. Allows you to collaborate with others in your organizations to get early feedback and allow you to identify needed changes earlier in the API lifecycle.
   
-Next page: 
+Next step: [Create Mock API](mockapi.md)
