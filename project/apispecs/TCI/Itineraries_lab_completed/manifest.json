@@ -1,0 +1,215 @@
+{
+    "name": "v1_itineraries_todo",
+    "description": " ",
+    "version": "1.0",
+    "type": "flogo",
+    "resources": {
+        "physicalMemory": 1024,
+        "totalMemory": 4096,
+        "cpuQuota": 25
+    },
+    "endpoints": [
+        {
+            "name": "AppHealthCheck",
+            "pingable": true,
+            "protocol": "http",
+            "port": "7777",
+            "type": "private",
+            "ping": "/ping"
+        },
+        {
+            "protocol": "http",
+            "port": "9999",
+            "spec": {
+                "name": "v1_itineraries_todo",
+                "version": "1.0.0"
+            },
+            "title": "ReceiveHTTPMessage",
+            "swagger": {
+                "swagger": "2.0",
+                "info": {
+                    "title": "v1_itineraries_todo",
+                    "version": "1.0.0",
+                    "description": " "
+                },
+                "paths": {
+                    "/v1/itineraries/{reservationid}": {
+                        "get": {
+                            "summary": "V1Itineraries_reservationid_GET",
+                            "operationId": "get_v1_itineraries_reservationid",
+                            "parameters": [
+                                {
+                                    "name": "reservationid",
+                                    "in": "path",
+                                    "description": "Request parameter",
+                                    "required": true,
+                                    "type": "string"
+                                }
+                            ],
+                            "responses": {
+                                "200": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "itinerary": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "passenger": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "passengerid": {
+                                                                "type": "string",
+                                                                "default": "AAAAA"
+                                                            },
+                                                            "name": {
+                                                                "type": "string",
+                                                                "default": "John Fisher"
+                                                            },
+                                                            "street": {
+                                                                "type": "string",
+                                                                "default": "1 Market Street"
+                                                            },
+                                                            "city": {
+                                                                "type": "string",
+                                                                "default": "Philadelphia"
+                                                            },
+                                                            "zipcode": {
+                                                                "type": "string",
+                                                                "default": "19350"
+                                                            }
+                                                        }
+                                                    },
+                                                    "flight": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "flightid": {
+                                                                "type": "string",
+                                                                "default": "11111"
+                                                            },
+                                                            "departurecity": {
+                                                                "type": "string",
+                                                                "default": "Philadelphia"
+                                                            },
+                                                            "departuretime": {
+                                                                "type": "string",
+                                                                "default": "01:00 PM"
+                                                            },
+                                                            "arrivalcity": {
+                                                                "type": "string",
+                                                                "default": "Boston"
+                                                            },
+                                                            "arrivaltime": {
+                                                                "type": "string",
+                                                                "default": "02:30 PM"
+                                                            }
+                                                        }
+                                                    },
+                                                    "status": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "flightid": {
+                                                                "type": "string",
+                                                                "default": "11111"
+                                                            },
+                                                            "status": {
+                                                                "type": "string",
+                                                                "default": "Delayed"
+                                                            },
+                                                            "terminal": {
+                                                                "type": "string",
+                                                                "default": "B"
+                                                            },
+                                                            "gate": {
+                                                                "type": "string",
+                                                                "default": "B1"
+                                                            }
+                                                        }
+                                                    },
+                                                    "reservation": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "reservationid": {
+                                                                "type": "string",
+                                                                "default": "AAAAA11111"
+                                                            },
+                                                            "flightid": {
+                                                                "type": "string",
+                                                                "default": "11111"
+                                                            },
+                                                            "passengerid": {
+                                                                "type": "string",
+                                                                "default": "AAAAA"
+                                                            },
+                                                            "aircraftid": {
+                                                                "type": "string",
+                                                                "default": "111"
+                                                            },
+                                                            "timecodeid": {
+                                                                "type": "string",
+                                                                "default": "201909010100PM"
+                                                            },
+                                                            "price": {
+                                                                "type": "string",
+                                                                "default": "250.00"
+                                                            },
+                                                            "class": {
+                                                                "type": "string",
+                                                                "default": "Business"
+                                                            },
+                                                            "rownumber": {
+                                                                "type": "string",
+                                                                "default": "20"
+                                                            },
+                                                            "seatnumber": {
+                                                                "type": "string",
+                                                                "default": "A"
+                                                            }
+                                                        }
+                                                    },
+                                                    "aircraft": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "aircraftid": {
+                                                                "type": "string",
+                                                                "default": "111"
+                                                            },
+                                                            "type": {
+                                                                "type": "string",
+                                                                "default": "767"
+                                                            },
+                                                            "seatcapacity": {
+                                                                "type": "string",
+                                                                "default": "280"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "404": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "code": {
+                                                "type": "integer",
+                                                "default": 404
+                                            },
+                                            "message": {
+                                                "type": "string",
+                                                "default": "reservationid: 1233322 Not Found"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "propertyPrefix": "TCI_FLOGO_USER_",
+    "properties": []
+}
