@@ -17,5 +17,9 @@ cd keys2cloud2019/scripts
 ./prep.sh
 ```
   
-Next step: [Deploy TCE Project](./1.TCE.md)
-
+## Workshop Overview
+[Import and Modify API Specification](apispec.md)
+[Create Mock API](mockapi.md)
+[Create API Implementation](apiimplementation.md)
+[Create Offer API](./1.TCE.md)
+[Manage Decision Table](2.WebStudio.md)
