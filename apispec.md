@@ -16,9 +16,8 @@ Sign into TIBCO Cloud and open API Specs.  There are many ways to navigate to AP
 Let’s create a GROUP to organize your APIs.
 
 1)	Select the + sign next to GROUP.  
-  <insert image>
-2)	Name your group CustomerExperienceAirport and press Create group.
-3)	Select your CustomerExperienceAirport group.
+2)  Name your group CustomerExperienceAirport and press Create group.
+3)  Select your CustomerExperienceAirport group.
   
 ### Import API Spec  
 Import https://raw.githubusercontent.com/wkarasz/keys2cloud2019/master/project/apispecs/ApiSpecs/v2/passengers.json  
