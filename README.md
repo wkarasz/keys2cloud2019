@@ -1,4 +1,12 @@
 # Keys to the Cloud Workshop
+
+## Workshop Overview
+[Import and Modify API Specification](apispec.md)  
+[Create Mock API](mockapi.md)  
+[Create API Implementation](apiimplementation.md)  
+[Create Offer API](./1.TCE.md)  
+[Manage Decision Table](2.WebStudio.md)  
+
 **The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](https://www.tibco.com/products/tibco-cloud-events/sign-up) in 30 seconds.  
   
 In addition, you can follow along exactly using a Cloud9 environment, an online IDE offered by AWS.  It's recommended to use Cloud9; although, you may choose to run locally on your system (additional configuration will be required).  
@@ -17,9 +25,4 @@ cd keys2cloud2019/scripts
 ./prep.sh
 ```
   
-## Workshop Overview
-[Import and Modify API Specification](apispec.md)  
-[Create Mock API](mockapi.md)  
-[Create API Implementation](apiimplementation.md)  
-[Create Offer API](./1.TCE.md)  
-[Manage Decision Table](2.WebStudio.md)  
+Next step: [Import API Spec](apispec.md)
