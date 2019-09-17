@@ -1,11 +1,11 @@
 # Keys to the Cloud Workshop
 
 ## Workshop Overview
-[Import and Modify API Specification](apispec.md)  
-[Create Mock API](mockapi.md)  
-[Create API Implementation](apiimplementation.md)  
-[Create Offer API](./1.TCE.md)  
-[Manage Decision Table](2.WebStudio.md)  
+[Import and Modify API Specification](0.apispec.md)  
+[Create Mock API](1.mockapi.md)  
+[Create API Implementation](2.apiimplementation.md)  
+[Create Offer API](3.TCE.md)  
+[Manage Decision Table](4.WebStudio.md)  
 
 **The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](https://www.tibco.com/products/tibco-cloud-events/sign-up) in 30 seconds.  
 
@@ -27,4 +27,4 @@ cd keys2cloud2019/scripts
 ```
 -->
   
-Next step: [Import API Spec](apispec.md)
+Next step: [Import API Spec](0.apispec.md)
