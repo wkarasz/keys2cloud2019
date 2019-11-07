@@ -6,6 +6,7 @@
 [Create API Implementation](2.apiimplementation.md)  
 [Create Offer API](3.TCE.md)  
 [Manage Decision Table](4.WebStudio.md)  
+[Cloud Analytics](5.analytics.md)
 
 **The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](https://www.tibco.com/products/tibco-cloud-events/sign-up) in 30 seconds.  
 
