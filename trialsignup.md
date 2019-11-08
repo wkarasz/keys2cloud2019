@@ -7,4 +7,4 @@ The workshop uses TIBCO Cloud Integration, TIBCO Cloud Events, and TIBCO Cloud A
 
 Select **FREE TRIAL** and select AWS from the dropdown.
 
-![Cloud Integration Signup](img/signup.png "Cloud Integration Signup")
+![Cloud Integration Signup](images/signup.png "Cloud Integration Signup")
