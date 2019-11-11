@@ -13,7 +13,7 @@ Enter your details and be sure to enter a valid email address.  In about 30 seco
 
 <img src="./images/trial_form.png" alt="Trial Signup Form" width=500/>
 
-Enter your details and in about 30 seconds your cloud environment will be ready.  At this time, we'll also add the remaining subscriptions needed for the workshop.
+Add the remaining subscriptions needed for the workshop, Spotfire and Events.  To add the additional capabilities, click on **Subscriptions**.
 
 ![Subscription](images/homepage_subscription.png "Add subscriptions")
 
