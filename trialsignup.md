@@ -24,3 +24,7 @@ Click on the **Add Subscription** links.  Either link will work just fine.
 Add Spotfire and Events to your trial by clicking on the **Free trial** button.
 
 <img src="./images/trial_spotfire.png" alt="Spotfire Free Trial" width=400/>&nbsp;&nbsp;<img src="./images/trial_events.png" alt="Events Free Trial" width=400/>
+
+That's it!  You're ready for the workshop.
+
+
