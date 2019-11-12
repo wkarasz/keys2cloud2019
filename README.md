@@ -5,8 +5,7 @@
 [Create Mock API](1.mockapi.md)  
 [Create API Implementation](2.apiimplementation.md)  
 [Create Offer API](3.TCE.md)  
-[Manage Decision Table](4.WebStudio.md)  
-[Cloud Analytics](5.analytics.md)
+[Analyze Data](5.analytics.md)
 
 **The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](trialsignup.md) in 30 seconds.  
 
