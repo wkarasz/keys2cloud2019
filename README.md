@@ -8,7 +8,7 @@
 [Manage Decision Table](4.WebStudio.md)  
 [Cloud Analytics](5.analytics.md)
 
-**The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](https://www.tibco.com/products/tibco-cloud-events/sign-up) in 30 seconds.  
+**The workshop requires a TIBCO Cloud account.**  You can get started with a [free trial](trialsignup.md) in 30 seconds.  
 
 <!--
 In addition, you can follow along exactly using a Cloud9 environment, an online IDE offered by AWS.  It's recommended to use Cloud9; although, you may choose to run locally on your system (additional configuration will be required).  
